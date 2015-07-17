@@ -2267,6 +2267,12 @@ Craft.BaseElementIndex = Garnish.Base.extend(
 
 		this.$toolbarTableRow.children().not(this.$selectAllContainer).removeClass('hidden');
 
+		// Check if there are any view mode buttons and force hide if not
+		if (!this.$viewModeBtnTd.find('.btngroup').children().length)
+		{
+			this.$viewModeBtnTd.addClass('hidden');
+		}
+
 		this.showingActionTriggers = false;
 	},
 
